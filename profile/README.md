@@ -10,5 +10,5 @@
 **Installation:**
 To install Knife, use the following command:
 ```
-curl -sSfL https://github.com/17do/knife-installer.github.io/releases/download/0.1/install.sh -o install.sh; chmod +x install.sh; ./install.sh
+curl -sSfL https://github.com/knife-package-manager/knife-installer/releases/download/0.1/installer.sh -o install.sh; chmod +x install.sh; ./install.sh 
 ```
