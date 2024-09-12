@@ -1,14 +1,62 @@
-**comrade** is a package manager designed to build programs from source code using `make`, ensuring that each program is optimized for the user's specific environment. Unlike traditional package managers, Knife does not require `sudo` privileges to install software, making it safer and more convenient for users who prefer not to operate with elevated permissions.
+# comrade-package-manager
 
-**Key Features:**
-- **Source-based Installation:** comrade compiles programs directly from source, allowing for custom optimizations tailored to your system's architecture.
-- **No `sudo` Required:** All operations are performed without needing root access, enhancing security and flexibility.
-- **Easy to Use:** The command `rade install <program>` simplifies the installation process. comrade also offers commands like `rade update` to keep the package manager itself up-to-date and `rade upgrade` to upgrade installed programs.
-- **Rust Implementation:** Written in Rust, comrade is both fast and safe, leveraging Rust's performance and memory safety features.
-- **Universal Compatibility:** comrade is designed to work in any environment, ensuring broad usability across different systems.
+**comrade** is a fast, flexible, and lightweight package manager written in Rust.
 
-**Installation:**
-To install comrade, use the following command:
+## Features
+
+- **Logging**: Track all installation, update, and removal actions via the `rade log status` command.
+- **Cross-Platform Support**: Supports multiple platforms, including specific architectures such as `x86_64-apple-silicon-darwin`.
+
+## Installation
+
+### Windows
+
+Download the installer and follow the instructions to install rade 
+
+[Installer (x86_64)](https://github.com/rade-package-manager/rade-installer/releases/download/0.1/ComradeInstaller.exe)
+
+> [!WARNING]
+> Also, please install git bash, and make (as these are used by rade)..
+
+### Linux / macOS
+
+1. Run the following commands in your terminal to download and install comrade:
+   ```bash
+   curl -sSfL https://github.com/rade-package-manager/rade-installer/releases/download/0.1/installer.sh -o install.sh
+   chmod +x install.sh
+   ./install.sh
+   ```
+This command installs the install.sh file and runs install.sh.
+After installation, the install.sh file will be automatically deleted.
+For more information, please visit [installer repositry](https://github.com/rade-package-manager/rade-installer/)
+
+
+## Usage
+
+After installation, you can start using comrade by entering commands in your terminal. To check the installation was successful, run:
+
+```bash
+rade --version
 ```
-curl -sSfL https://github.com/rade-package-manager/rade-installer/releases/download/0.1/installer.sh -o install.sh; chmod +x install.sh; ./install.sh 
+
+### Viewing Logs
+
+To view the log of recent actions:
+```bash
+rade log status
 ```
+
+## Contributing
+
+We welcome contributions from the community! If you'd like to contribute:
+
+1. Fork the repository.
+2. Create a new branch for your feature or fix.
+3. Submit a pull request with a clear description of your changes.
+
+For more details, please see [CONTRIBUTING.md](https://github.com/rade-package-manager/rade-package-manager/blob/stable/CONTRIBUTING.md).
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](https://github.com/rade-package-manager/rade-package-manager/blob/stable/LICENSE) file for more details.
+
